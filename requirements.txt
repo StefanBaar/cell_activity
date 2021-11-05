@@ -1,0 +1,18 @@
+# Python dependencies required for development
+future
+joblib
+kornia
+matplotlib
+numpy
+Pillow
+psd-tools
+psutil
+pyyaml
+requests
+scipy
+setuptools
+skimage
+six
+torch
+torchvision
+tqdm
