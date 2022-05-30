@@ -95,7 +95,7 @@ def create_wmap(data):
 ### for masks containing outline in postions
 def apply_torch_weightmap(TORCH,TMASK,D=3):
     WMAP        = create_wmap(TMASK)
-    WD          = TORCH.max(3)[0].max(2)[0].max(1)[0]-TORCH.min(3)[0].min(2)[0].min(1)[0]*10.
+    WD          = (TORCH.max(3)[0].max(2)[0].max(1)[0]-TORCH.min(3)[0].min(2)[0].min(1)[0])*10.
     OFFSET      = torch.zeros_like(TORCH).cpu()
     OFFSET[:,1] = -(WMAP.T*WD.cpu()).T
     OFFSET[:,3] =  (WMAP.T*WD.cpu()).T
